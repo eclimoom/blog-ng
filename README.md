@@ -6,6 +6,7 @@ The project is based on Angular 2 and StrongLoop(Loopback) & Mongodb.
 * Install [NodeJs](http://nodejs.org/)
 * Install [Loopback](http://loopback.io/)
 * Install [Angular2 Cli](http://cli.angular.io/)
+* Install [Mongodb](https://www.mongodb.com/)
 
 
 ## git clone [git://url]
