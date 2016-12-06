@@ -1,9 +1,6 @@
 # Blog
 
-The project is based on nodejs 、LoopBack、Mongodb.
-
-# Build your own blog with Angular 2 and StrongLoop(Loopback) & Mongodb.
-
+The project is based on Angular 2 and StrongLoop(Loopback) & Mongodb.
 前端基于Angular 2，后端是基于Node的Loopback服务端，数据存储用的MongoDB
 
 * Install [http://nodejs.org/](http://nodejs.org/)
