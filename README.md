@@ -3,9 +3,9 @@
 The project is based on Angular 2 and StrongLoop(Loopback) & Mongodb.
 前端基于Angular 2，后端是基于Node的Loopback服务端，数据存储用的MongoDB
 
-* Install [http://nodejs.org/](http://nodejs.org/)
-* Install [http://loopback.io/](http://loopback.io/)
-* Install Angular2 Cli [http://cli.angular.io/](http://cli.angular.io/)
+* Install [NodeJs](http://nodejs.org/)
+* Install [Loopback](http://loopback.io/)
+* Install [Angular2 Cli](http://cli.angular.io/)
 
 
 ## git clone [git://url]
