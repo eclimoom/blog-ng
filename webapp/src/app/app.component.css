@@ -1,0 +1,51 @@
+.main-nav {
+  background: #c1372b;
+  height: 50px;
+  min-height: 50px;
+  padding: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.main-nav li a {
+  color: #fff;
+}
+
+.main-nav li a:hover,
+.main-nav li a:focus,
+.main-nav .open a,
+.main-nav .open a:hover,
+.main-nav .open a:focus {
+  color: #fff;
+  background-color: #b03227;
+  box-shadow: 0px 0px 1px #f1a49d;
+}
+
+.navbar-brand {
+  color: #fff;
+}
+
+.main-container {
+  padding-top: 80px;
+  min-height: 500px;
+}
+
+.footer {
+  padding: 20px 0;
+  margin-top: 20px;
+  background: #263238;
+  color: #fefefe;
+}
+
+.footer a {
+  color: #fefefe;
+}
+.text-caption, .text-aside, .docs-content aside {
+  margin: 0 0 16px 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}

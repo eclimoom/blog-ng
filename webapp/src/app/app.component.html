@@ -1,0 +1,60 @@
+<!-- 顶部导航 -->
+<div class="navbar navbar-fixed-top main-nav">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a routerLink="home" class="navbar-brand">
+        Angular2 Blog
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a routerLink="home">热门</a>
+        </li>
+        <li class="">
+          <a routerLink="list">图说</a>
+        </li>
+        <li class="">
+          <a routerLink="home">blog</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a routerLink="login">登录</a>
+        </li>
+        <li>
+          <a routerLink="register">注册</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right hide">
+        <li>
+          <a routerLink="user">欢迎你：eclimoom</a>
+        </li>
+        <li>
+          <a routerLink="manage">管理后台</a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" (click)="doLogout()">退出</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- 主体内容区域 -->
+<div class="main-container">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="footer text-center">
+  <div class="container"><small class="text-caption">
+    Powered by Eclimoom ©2010-2016.
+    <a href="/license">京ICP备0000001号</a></small>
+    <a aria-label="View Style Guide" href="#" title="Style Guide" class="styleguide-trigger"><span class="icon-favorite"></span></a>
+  </div>
+</div>
