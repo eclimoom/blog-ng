@@ -12,11 +12,21 @@ import { ListComponent } from './post/list/list.component';
 import { HotComponent } from './post/hot/hot.component';
 import { TagComponent } from './post/tag/tag.component';
 import { DetailComponent } from './post/detail/detail.component';
+import { DetailLayoutComponent } from './post/detail-layout/detail-layout.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'list', component: ListComponent }
+  { path: 'detail/:id', component: DetailLayoutComponent },
+  { path: 'login', component: HomeComponent },
+  { path: 'register', component: HomeComponent },
+  { path: 'user', component: HomeComponent },
+  { path: 'manage', component: HomeComponent },
+  { path: 'forget', component: HomeComponent },
+  {
+    path:'**',//404 page
+    component:HomeComponent
+  }
 ];
 
 
@@ -28,7 +38,8 @@ const appRoutes: Routes = [
     HomeComponent,
     HotComponent,
     TagComponent,
-    DetailComponent
+    DetailComponent,
+    DetailLayoutComponent
   ],
   imports: [
     BrowserModule,

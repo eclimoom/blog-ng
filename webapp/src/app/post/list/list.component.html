@@ -1,19 +1,6 @@
 <div class="post-list-container">
   <div class="row">
-    <div class="col-sm-12">
-      <!--<div class="post-item-container" *ngFor="let post of postList">-->
-        <!--<h4>-->
-          <!--<a [routerLink]="['/postdetail',post.postId]">{{post.title}}</a>-->
-        <!--</h4>-->
-        <!--<p>-->
-          <!--{{post.userName}}-->
-          <!--&nbsp;&nbsp;&nbsp;&nbsp;{{post.postTime}}-->
-          <!--&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-eye" aria-hidden="true"></i>&nbsp;{{post.readTimes}}-->
-          <!--&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comment" aria-hidden="true"></i>&nbsp;{{post.commentTimes}}-->
-        <!--</p>-->
-      <!--</div>-->
-
-      <div class="col-md-12 wow fadeIn" *ngFor="let l of list">
+      <div class="wow fadeIn" *ngFor="let l of list">
         <div class="post">
           <div class="middle-content">
             <div class="entry-meta">
@@ -34,8 +21,6 @@
           </div>
         </div>
       </div>
-
-      <pagination [totalItems]="totalItems" [maxSize]="maxSize" [itemsPerPage]="itemsPerPage" [(ngModel)]="currentPage" [firstText]="firstText" [lastText]="lastText" [previousText]="previousText" [nextText]="nextText" [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event" (pageChanged)="pageChanged($event)" class="pagination-sm" ></pagination>
-    </div>
   </div>
+  <pagination [totalItems]="totalItems" [maxSize]="maxSize" [itemsPerPage]="itemsPerPage" [(ngModel)]="currentPage" [firstText]="firstText" [lastText]="lastText" [previousText]="previousText" [nextText]="nextText" [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event" (pageChanged)="pageChanged($event)" class="pagination-sm" ></pagination>
 </div>

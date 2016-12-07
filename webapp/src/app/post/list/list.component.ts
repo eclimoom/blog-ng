@@ -1,34 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import {PostService} from '../post.service';
+import {Post} from '../post';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
+  providers:[PostService]
 })
 export class ListComponent implements OnInit {
-  public maxSize:number = 5;
-  public itemsPerPage:number=5;
-  public totalItems:number = 15;
-  public currentPage:number = 1;
 
-  public firstText:string="首页";
-  public lastText:string="尾页";
-  public previousText:string="上一页";
-  public nextText:string="下一页";
+  private list:Array<any>=[];
+  private maxSize:number = 5;
+  private itemsPerPage:number=5;
+  private totalItems:number = 15;
+  private currentPage:number = 1;
+
+  private firstText:string="首页";
+  private lastText:string="尾页";
+  private previousText:string="上一页";
+  private nextText:string="下一页";
+
+  title:string = "Blog";
+  posts:Post[] = [];
+
 
   constructor(private router: Router,
-              private route: ActivatedRoute) {
+              private postService:PostService) {
 
   }
-  private list:Array<any>=[
-    {id:"1",body:'一天上课，一女生有事跟老师请假走了，一哥们也无缘无故地跟着走了，众人奇怪。中午回来后看见他的朋友圈发了条：“今天丢人丢大了，上课时我昏昏欲睡，突然看见一同学拿包走人。我以为下课了，也拿包走人……”',createAt:'2016-11-21 10:44',nick:'eclimoom',userId:'1',read:'10',commentTimes:'2016-11-12 12:00:00'},
-    {id:"2",body:'奶奶去世早，爷爷寂寞地过了十几年孤单日子。现在快90了，整天念叨不想再活了。有一天他竟弄了张“遗照”挂奶奶遗照旁边了。家人都拗不过就随他去了。一日同学来玩，看见照片问是谁，我说是爷爷奶奶。赶巧爷爷从里屋走出来，默默出门了。一阵沈默，同学惊恐的问：你刚刚有看到吗？',createAt:'2016-11-21 10:44',userName:'eclimoom',userId:'1',read:'11',commentTimes:'2016-11-12 13:00:00'},
-    {id:"3",body:'小明掏口袋的时候，一把钥匙掉了，当时没有发现，后来回去找！在路边有对小情侣在那里，男的突然激动的说：是谁的？到底是谁的？小明连忙说：我的，我的，是我的！后来小明才知道，原来是那女的怀孕了~',createAt:'2016-11-21 10:44',nick:'eclimoom',userId:'1',read:'12',commentTimes:'2016-11-12 14:00:00'}
-  ];
 
 
   ngOnInit() {
+    //do request and get all blog entries
+    this.postService.getAll().subscribe(res => {
+      this.list= res;
+    },err =>{
+      console.log(err);
+    })
+
   }
 
   public setPage(pageNo:number):void {

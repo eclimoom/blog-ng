@@ -1,3 +1,63 @@
-<p>
-  detail works!
-</p>
+<div class="post-list-container">
+  <div class="post">
+    <div class="middle-content">
+      <div class="entry-meta">
+        <ul class="list-inline">
+          <li class="post-head"><a><img src="/assets/images/1.jpg"></a></li>
+          <li><a>她若安好那还得了</a></li>
+          <li><span>{{post.createAt}} </span></li>
+          <li><a href="#">赞 3002</a></li>
+          <li><a href="#">嘘 3</a></li>
+          <li><a href="#">收藏 500</a></li>
+          <li><a href="#">{{post.read}} 20</a></li>
+        </ul>
+        <a class="info" href="#">{{post.body}}
+        </a>
+
+      </div>
+      <div class="page-tools clearfix">
+        <div class="col-sm-2">
+          <a class=" btn btn-default">上一条</a>
+        </div>
+        <div class="col-sm-8">
+          <a class="btn btn-primary">下一条，你懂的</a>
+        </div>
+        <div class="col-sm-2">
+          <a class="btn btn-primary"><i class="fa fa-star-o"></i>加入收藏</a>
+        </div>
+      </div>
+      <div class="entry-content-wrapper">
+        <h2 class="entry-title">留言</h2>
+        <div class="comment_list">
+          <ul id="comment-list">
+            <li class="list_item">
+              <div class="item_avatar">
+                <img src="/assets/images/1.jpg" alt="" data-pin-nopin="true">
+              </div>
+              <div class="item_user">
+                <p><a class="user_name" href="#">Rachel</a><span class="item_time">2016-05-03 17:41:12</span></p>
+                <p class="user_comment">
+                  有空哦，大家都这么忙，互相了解对方的长处和深度就行了</p>
+              </div>
+            </li>
+            <li class="list_item">
+              <div class="item_avatar">
+                <img src="/assets/images/1.jpg" alt="">
+              </div>
+              <div class="item_user">
+                <p><a class="user_name">大型互联网企业生产环境中</a><span class="item_time">2016-05-03 17:41:12</span></p>
+                <p class="user_comment">
+                  有空哦，大家都这么忙，互相了解对方的长处和深度就行了</p>
+              </div>
+            </li>
+          </ul>
+          <form action="">
+            <textarea name="comment" class="comment-txt" id="comment-input" cols="30" rows="4"
+                      placeholder="请评论"></textarea>
+            <button type="submit" class="btn btn-primary">提交</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
