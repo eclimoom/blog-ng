@@ -1,0 +1,45 @@
+.wd-xl .panel-heading{padding:5px 0;border-top-left-radius:4px;border-top-right-radius:4px;background:#333844;}
+.wd-xl .panel-body{padding:30px 50px 50px 50px;color:#fff;border-bottom-right-radius:4px;border-bottom-left-radius:4px;background-color:rgba(51,56,68,.85);}
+
+.main-container{
+  min-height:100%;
+  width: 100%;
+  padding: 0;
+}
+
+.form-signin{max-width:330px;padding:15px;margin:0 auto;}
+.form-signin .form-signin-heading,.form-signin .checkbox{margin-bottom:10px;}
+.form-signin .checkbox{font-weight:normal;margin-left: 20px;}
+.form-signin .form-control{position:relative;font-size:16px;height:auto;padding:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.form-signin .form-control:focus{z-index:2;}
+.form-signin input[type="text"]{margin-bottom:-1px;border-bottom-left-radius:0;border-bottom-right-radius:0;}
+.form-signin input[type="password"]{margin-bottom:10px;border-top-left-radius:0;border-top-right-radius:0;}
+.form-signin input.in-register{
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.form-signin input.last{margin-bottom: 10px;
+  border-top: none;
+  border-top-left-radius:0;
+  border-top-right-radius:0;
+  border-bottom-left-radius:2px;
+  border-bottom-right-radius:2px;
+}
+.account-wall{margin-top:20px;padding:40px 0 20px 0;background-color: rgba(247, 247, 247, 0.85);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.3);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.4);box-shadow:0 1px 3px rgba(0,0,0,0.4);}
+.login-title{color:#555;font-size:18px;font-weight:400;display:block;}
+.profile-img{width:96px;height:96px;margin:0 auto 10px;display:block;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;}
+.need-help{margin-top:10px;}
+.new-account{display:block;margin-top:10px;
+}
+
+.btn-primary {
+  background: #c1372b;
+  border-color: #b93529;
+}
+.login-wrap{
+  position: relative;
+  min-height: 530px;
+  margin-top: 50px;}
+
+
+.main-container{min-height: 100%;}
