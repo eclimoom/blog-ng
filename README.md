@@ -48,7 +48,6 @@ post
 \blog
 ```
 ng new webapp
-ng bew webapp
 cd webapp
 npm install
 
