@@ -5,7 +5,7 @@
         <h1 class="text-center login-title">登录帐号</h1>
         <div class="account-wall">
           <img class="profile-img" src="/assets/images/photo.png" alt="" />
-          <form class="form-signin">
+          <form class="form-signin" #f="ngForm" (ngSubmit)="onLogin()">
             <input type="text" class="form-control" placeholder="用户名" required autofocus>
             <input type="password" class="form-control" placeholder="密码" required>
             <a class="btn btn-lg btn-primary btn-block" routerLink="home" type="submit">登 录</a>

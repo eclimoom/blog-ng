@@ -23,7 +23,9 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'user', component: HomeComponent },
-  { path: 'manage', component: HomeComponent },
+  { path: 'admin',
+    loadChildren:'app/admin-ng2/admin.module'
+  },
   { path: 'forget', component: HomeComponent },
   {
     path:'**',//404 page
