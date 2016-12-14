@@ -12,14 +12,10 @@ import {UserService} from "./user/user.service";
 export class AppComponent {
 
   user:User = new User();
-  loggedIn: boolean = false;
 
   constructor(private authService:AuthService,private userService:UserService){
 
     this.user = this.authService.getCurrentUser();
-    if(this.user){
-      this.loggedIn = true;
-    }
   }
 
   logout(){
