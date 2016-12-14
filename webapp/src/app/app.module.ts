@@ -15,6 +15,7 @@ import { DetailComponent } from './post/detail/detail.component';
 import { DetailLayoutComponent } from './post/detail-layout/detail-layout.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
+import {AuthService} from "./user/auth.service";
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -54,7 +55,7 @@ const appRoutes: Routes = [
     PaginationModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

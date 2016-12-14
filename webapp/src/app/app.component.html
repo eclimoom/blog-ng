@@ -18,13 +18,13 @@
           <a routerLink="home">热门</a>
         </li>
         <li class="">
-          <a routerLink="list">图说</a>
+          <a routerLink="list">图说{{loggedIn}}</a>
         </li>
         <li class="">
           <a routerLink="home">blog</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" *ngIf="!authService.isLogin">
         <li>
           <a routerLink="login">登录</a>
         </li>
@@ -32,15 +32,15 @@
           <a routerLink="register">注册</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right hide">
+      <ul class="nav navbar-nav navbar-right" *ngIf="authService.isLogin">
         <li>
           <a routerLink="user">欢迎你：eclimoom</a>
         </li>
         <li>
-          <a routerLink="manage">管理后台</a>
+          <a routerLink="admin">管理后台</a>
         </li>
         <li>
-          <a href="javascript:void(0);" (click)="doLogout()">退出</a>
+          <a href="javascript:void(0);" (click)="logout()">退出</a>
         </li>
       </ul>
     </div>

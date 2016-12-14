@@ -9,7 +9,7 @@ export class PostService {
   constructor(private http:Http) { }
 
   headers = new Headers({
-    "Content-Type":"application.josn"
+    "Content-Type":"application/json"
   });
 
   getAll(): Observable<Post[]>{
