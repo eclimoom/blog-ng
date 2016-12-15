@@ -22,7 +22,6 @@ export class ListComponent implements OnInit {
   private previousText:string="上一页";
   private nextText:string="下一页";
 
-  title:string = "Blog";
   posts:Post[] = [];
 
 

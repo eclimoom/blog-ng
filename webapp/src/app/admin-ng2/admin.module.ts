@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
+import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { CommentManageComponent } from './comment-manage/comment-manage.component';
 import { PostManageComponent } from './post-manage/post-manage.component';
@@ -11,6 +12,7 @@ import { ManageNavComponent } from './manage-nav/manage-nav.component';
 import { UserManageComponent } from './user-manage/user-manage.component';
 import { TagManageComponent } from './tag-manage/tag-manage.component';
 import { ProfileComponent } from '../user/profile/profile.component';
+import { PostAddComponent } from './post-add/post-add.component';
 
 
 const adminRoutes:Routes = [
@@ -24,7 +26,8 @@ const adminRoutes:Routes = [
       { path: 'sys-set', component: SysSetComponent },
       { path: 'user', component: UserManageComponent },
       { path: 'tag', component: TagManageComponent },
-      { path: 'profile', component: ProfileComponent }
+      { path: 'profile', component: ProfileComponent },
+      { path: 'post-add', component: PostAddComponent }
     ]
   }
 ];
@@ -43,9 +46,12 @@ const adminRoutes:Routes = [
     SysSetComponent,
     UserManageComponent,
     TagManageComponent,
-    ProfileComponent
+    ProfileComponent,
+    PostAddComponent
   ],
   exports:[
+    HttpModule,
+    PaginationModule,
     AdminLayoutComponent
   ],
   providers: []
