@@ -16,14 +16,14 @@ export class UserService {
   constructor(private http:Http,private authService:AuthService) { }
 
   login(username:string,password:string):Observable<any>{
-    let url = this.serverUrl+'/Users/login?include=user';
+    let url = this.serverUrl+'/accounts/login?include=user';
     return this.http.post(url,{username:username,password:password},{headers:this.headers}).map(res => res.json()).catch(err => {
         return Observable.throw(err);
     })
   }
 
   logout(): Observable<any>{
-    let url = this.serverUrl+'/Users/logout';
+    let url = this.serverUrl+'/accounts/logout';
     let param = {accessTokenID:this.authService.getToken()};
 
     this.authService.logout();

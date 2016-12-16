@@ -18,28 +18,29 @@
   </form>
   <div class="row">
     <div class="col-sm-12">
-        <table class="table table-striped table-bordered table-list">
-          <thead>
-          <tr>
-            <th>标题</th>
-            <th class="hidden-xs">作者</th>
-            <th class="hidden-xs">日期</th>
-            <th><em class="fa fa-cog"></em></th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let l of list">
-            <td class="hidden-xs">{{l.title}}</td>
-            <td>{{l.nick}}</td>
-            <td class="hidden-xs">{{l.createAt}}</td>
-            <td>
-              <a class="btn btn-sm btn-info"><em class="fa fa-long-arrow-up"></em></a>
-              <a class="btn btn-sm btn-default"><em class="fa fa-pencil"></em></a>
-              <a class="btn btn-sm btn-danger"><em class="fa fa-trash"></em></a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+      <table class="table table-striped table-bordered table-list">
+        <thead>
+        <tr>
+          <th>标题</th>
+          <th class="hidden-xs">作者</th>
+          <th class="hidden-xs">日期</th>
+          <th><em class="fa fa-cog"></em></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let l of list">
+          <td class="hidden-xs">{{l.title}}</td>
+          <td>{{l.nick}}</td>
+          <td class="hidden-xs">{{l.createAt}}</td>
+          <td>
+            <a class="btn btn-sm btn-info"><em class="fa fa-long-arrow-up"></em></a>
+            <a class="btn btn-sm btn-default"><em class="fa fa-pencil"></em></a>
+            <a class="btn btn-sm btn-danger"><em class="fa fa-trash"></em></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <pagination [totalItems]="totalItems" [maxSize]="maxSize" [itemsPerPage]="itemsPerPage" [(ngModel)]="currentPage" [firstText]="firstText" [lastText]="lastText" [previousText]="previousText" [nextText]="nextText" [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event" (pageChanged)="pageChanged($event)" class="pagination-sm" ></pagination>
 
 
     </div>

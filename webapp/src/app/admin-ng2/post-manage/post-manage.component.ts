@@ -11,6 +11,7 @@ import {Post} from '../../post/post';
 })
 export class PostManageComponent implements OnInit {
 
+
   private list:Array<any>=[];
   private maxSize:number = 5;
   private itemsPerPage:number=5;

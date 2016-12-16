@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { CommentManageComponent } from './comment-manage/comment-manage.component';
 import { PostManageComponent } from './post-manage/post-manage.component';
@@ -21,6 +22,7 @@ const adminRoutes:Routes = [
     component:AdminLayoutComponent,
     children: [
       { path: '', component: PostManageComponent },
+      { path: 'admin', component: PostManageComponent },
       { path: 'post', component: PostManageComponent },
       { path: 'comment', component: CommentManageComponent },
       { path: 'sys-set', component: SysSetComponent },
@@ -36,6 +38,7 @@ const adminRoutes:Routes = [
   imports: [
     CommonModule,
     HttpModule,
+    PaginationModule,
     RouterModule.forChild(adminRoutes)
   ],
   declarations: [
@@ -51,7 +54,6 @@ const adminRoutes:Routes = [
   ],
   exports:[
     HttpModule,
-    PaginationModule,
     AdminLayoutComponent
   ],
   providers: []

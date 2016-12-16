@@ -23,8 +23,7 @@ const appRoutes: Routes = [
   { path: 'detail/:id', component: DetailLayoutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'user', component: HomeComponent },
-  { path: 'admin',
+  { path: 'user',
     loadChildren:'app/admin-ng2/admin.module'
   },
   { path: 'forget', component: HomeComponent },
