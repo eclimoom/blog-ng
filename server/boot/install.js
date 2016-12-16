@@ -3,7 +3,7 @@
 var install = true;
 module.exports = function (app) {
   if (!install) {
-    var User = app.models.User;
+    var User = app.models.Account;
     var Role = app.models.Role;
     var RoleMapping = app.models.RoleMapping;
 
@@ -20,7 +20,7 @@ module.exports = function (app) {
       //...
       // Create the admin role
       Role.create({
-        name: 'admin'
+        name: 'administrator'
       }, function (err, role) {
         if (err) throw err;
         if (err) {
