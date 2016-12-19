@@ -12,7 +12,6 @@ import { SysSetComponent } from './sys-set/sys-set.component';
 import { ManageNavComponent } from './manage-nav/manage-nav.component';
 import { UserManageComponent } from './user-manage/user-manage.component';
 import { TagManageComponent } from './tag-manage/tag-manage.component';
-import { ProfileComponent } from '../user/profile/profile.component';
 import { PostAddComponent } from './post-add/post-add.component';
 
 
@@ -28,7 +27,6 @@ const adminRoutes:Routes = [
       { path: 'sys-set', component: SysSetComponent },
       { path: 'user', component: UserManageComponent },
       { path: 'tag', component: TagManageComponent },
-      { path: 'profile', component: ProfileComponent },
       { path: 'post-add', component: PostAddComponent }
     ]
   }
@@ -49,7 +47,6 @@ const adminRoutes:Routes = [
     SysSetComponent,
     UserManageComponent,
     TagManageComponent,
-    ProfileComponent,
     PostAddComponent
   ],
   exports:[
